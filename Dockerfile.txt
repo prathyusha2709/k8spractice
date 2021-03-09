@@ -1,0 +1,5 @@
+FROM openjdk:8-alpine
+WORKDIR ./app
+ADD dockerweb-0.0.1-SNAPSHOT.jar dockerweb.jar
+EXPOSE 8080
+ENTRYPOINT ["java","-jar","dockerweb.jar"]
